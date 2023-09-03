@@ -36,6 +36,11 @@ cmp.setup({
 })
 
 
+local ccls_lsp_config = {
+	name = 'clangd',
+	cmd = {'clangd'},
+}
+
 vim.lsp.start({
 	name = 'clangd',
 	cmd = {'clangd'},

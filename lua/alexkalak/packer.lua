@@ -1,5 +1,6 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
+
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -28,9 +29,9 @@ end
 })
 
 
- use({'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'})
+use({'nvim-treesitter/nvim-treesitter', run = 'TSUpdate'})
 
- use {
+use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
 		requires = {
@@ -54,6 +55,14 @@ end
 use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
 end}
+
+use({
+  "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  config = function()
+    require("lsp_lines").setup()
+  end,
+})
+	
 
 end)
 

@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-	ensure_installed = {"cpp", "lua"},
+	ensure_installed = {"cpp", "c", "lua"},
 	sync_install = false,
 	ignore_install = { "" },
 	highlight = {
@@ -12,5 +12,5 @@ configs.setup {
 		disable = { "" },
 		additional_vim_regex_highlighting = false,
 	},
-	indent = {enable = true, disable = { "yaml"} },
+	--indent = {enable = true, disable = { "yaml"} },
 }
